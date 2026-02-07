@@ -31,5 +31,5 @@ RUN git clone https://github.com/DepthAnything/Depth-Anything-V2
 RUN cd Depth-Anything-V2 && pip3 install -r requirements.txt
 
 RUN git clone --recursive https://github.com/tauzn-clock/RescalingCompressedSensing
-RUN cd RescalingCompressedSensing/pylbfgs && pip3 install -r requirements.txt
-RUN source ./install_liblbfgs.sh
+RUN cd RescalingCompressedSensing & pip3 install -r requirements.txt
+RUN cd pylbfgs & source ./install_liblbfgs.sh
