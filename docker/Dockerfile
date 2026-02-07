@@ -27,13 +27,5 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN git clone --branch inpaint --recursive https://github.com/tauzn-clock/pylbfgs
-WORKDIR /pylbfgs
-RUN git submodule update --init --recursive
-RUN chmod +x ./install_liblbfgs.sh
-RUN ./install_liblbfgs.sh
-RUN pip3 install -r requirements.txt
-RUN python3 setup.py build_ext --inplace
-
 RUN git clone https://github.com/DepthAnything/Depth-Anything-V2
 RUN cd Depth-Anything-V2 && pip3 install -r requirements.txt
