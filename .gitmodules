@@ -1,0 +1,3 @@
+[submodule "pylbfgs"]
+	path = pylbfgs
+	url = https://github.com/tauzn-clock/pylbfgs
