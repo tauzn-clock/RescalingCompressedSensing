@@ -117,8 +117,8 @@ def rescale_ratio_proportional(depth, est):
     return ratio
 
 if __name__ == "__main__":
-    test = np.array([[1,2],[3,4]])
-    mask = np.array([[1,1],[1,0]])
+    test = np.array([[1,2,3,4],[2,4,6,8],[3,6,9,12],[4,8,12,16]])
+    mask = np.array([[1,1,1,1],[1,0,0,1],[1,0,0,1],[1,1,1,1]])
 
     print(spfft.dctn(test,1))
     print(spfft.dctn(test*mask,1))
