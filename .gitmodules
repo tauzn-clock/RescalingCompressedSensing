@@ -1,3 +1,9 @@
 [submodule "pylbfgs"]
 	path = pylbfgs
 	url = https://github.com/tauzn-clock/pylbfgs
+[submodule "Depth-Anything-V2"]
+	path = Depth-Anything-V2
+	url = https://github.com/DepthAnything/Depth-Anything-V2
+[submodule "DepthPrompting"]
+	path = DepthPrompting
+	url = https://github.com/JinhwiPark/DepthPrompting

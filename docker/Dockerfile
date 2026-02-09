@@ -27,9 +27,8 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/DepthAnything/Depth-Anything-V2
-RUN cd Depth-Anything-V2 && pip3 install -r requirements.txt
-
 RUN git clone --recursive https://github.com/tauzn-clock/RescalingCompressedSensing
 RUN cd RescalingCompressedSensing && pip3 install -r ./requirements.txt
-RUN cd RescalingCompressedSensing/pylbfgs && ./install_liblbfgs.sh
+RUN cd RescalingCompressedSensing/pylbfgs && ./install_liblbfgs.sh && python3 setup.py install
+RUN cd RescalingCompressedSensing/Depth-Anything-V2 && pip3 install -r requirements.txt
+RUN cd RescalingCompressedSensing/DepthPrompting && ./requirements.sh
